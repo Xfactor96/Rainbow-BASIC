@@ -63,3 +63,9 @@ additional: the development is taking longer than expected but rest assured it w
 
 
  due to the fact that this is my first big project, and as I am not as skilled in multiple OS versions, the best I will be able to give you for cross building is a text file of the code. I apologize for that
+
+ Edit for 3/16/26
+
+ WordBASIC is finally done. y'all are in for a treat
+
+ 
