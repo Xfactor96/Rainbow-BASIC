@@ -1,0 +1,157 @@
+I worked my ass off trying to get this done but the GDREAM engine is now live. Everything in RAINBOW BASIC still applies. Here's the full list of commands:
+GDREAM FINALUPDATE — COMMAND REFERENCE
+=====================================
+
+GLOBAL COMMANDS
+----------------
+HELP <topic>
+HELP UPDATE
+CLEAR
+EXIT
+MODE <WORD|FREEFORM|FMV|PLATFORM|EXEC>
+FREEFORM ON/OFF
+GUI
+SCAN
+UPDATE
+EXPAND <keyword>
+DEVKIT <platform> <command>
+VICE PATCH <file> <offset_hex> <bytes_hex>
+
+
+WORD MODE
+---------
+NOUN <word>
+VERB <word>
+ADJ <word>
+COMPOSE
+
+Examples:
+  NOUN castle
+  VERB rises
+  ADJ ancient
+  COMPOSE
+
+
+FREEFORM MODE
+-------------
+DESCRIBE <text>
+STYLE <style>
+RENDER
+EXPAND <keyword>
+
+Examples:
+  DESCRIBE a foggy forest
+  STYLE vhs
+  RENDER
+
+
+FMV MODE
+--------
+FRAME <description>
+FPS <number>
+PLAY
+
+Examples:
+  FRAME hero enters room
+  FPS 8
+  PLAY
+
+
+PLATFORM MODE
+-------------
+TILE <tile>
+ENTITY <entity>
+MOVE <entity> <direction>
+GRAVITY <on|off>
+
+Examples:
+  TILE stone floor
+  ENTITY player
+  MOVE player right
+  GRAVITY off
+
+
+EXEC MODE
+---------
+ADMIN ON/OFF
+AUDIT
+PURGE
+EXPAND <keyword>
+DEVKIT <platform> <command>
+
+Examples:
+  ADMIN ON
+  AUDIT
+  PURGE
+  EXPAND torch
+
+
+DEVKIT — COMMODORE (RAINBOW PACKAGE)
+-------------------------------------
+BUILD / MAKE
+FIND <value>
+POKE <addr> <value>
+FILL <addr> <length> <value>
+MATCH <value>
+ASM
+STRICT <version>
+ADD <command>
+MEMFIT
+SPRITE <id> <hexdata>
+SECTION <name> <start> <end>
+FLOAT
+PRECISE <digits>
+BLOCK <x> <y> <id>
+XPOKE <addr> <value16>
+XPEEK <addr>
+FILTER
+SOUND <params>
+DEMO
+
+Exports: RAINBOW.d64
+
+Examples:
+  DEVKIT COMMODORE BUILD
+  DEVKIT COMMODORE POKE 0xC000 1
+  DEVKIT COMMODORE FILL 0x0400 100 32
+  DEVKIT COMMODORE SPRITE 0 DEADBEEF
+
+
+DEVKIT — PET
+-------------
+MTU
+ALLOC <bytes>
+DIAG
+FAST
+STRICT <version>
+LAX
+KEY <mapping>
+SOUND <params>
+
+UPGRADE (enables business commands):
+  SEEK <target>
+  FIND <target>
+  P. <text>
+  MEMFIT
+  ACCOUNT
+  MEM MAX <amount>
+  FONT <mode>
+  FIX <doc>
+  REPAIR <doc>
+
+Exports: RAINBOW_PET.d64
+
+Examples:
+  DEVKIT PET MTU
+  DEVKIT PET UPGRADE
+  DEVKIT PET SEEK invoice
+  DEVKIT PET FONT AMBER
+
+Expand allows you to add even more. I've added FMV options, I've even made this program safe for larger companies. Yes, the execs and corporate can add all the BS they want but I assure you, the system will NOT accept it. 
+they will also get a "Special" version of the game. Let me reiterate: EA can use my tool to make their games but they cannot override, bypass or reverse engineer it. You corporate assholes will get a special version of the game: 
+Completely broken, just like you. This engine is licensed under Apache 2.0. The code is open source but the engine is mine. Porn is not allowed under any circumstances and will not be tolerated. If i find out you did it (and i have my ways), you're locked
+out of updates. DON'T test my generosity. 
+
+It is my earnest hope that you enjoy this product and make some truly epic games with it. There's a bunch of easter eggs and stuff, minigames when loading etc. You're going to have a lot of fun with this one. FREEFORM allows plain english to be used. 
+no forth BS, once the word is typed, it goes in the dictionary. All images and other resources come from a PD server (archive.org) and the program is syntax agnostic. you can use line numbers, you can use full sentences or you can use caps.
+the base mode (word) is All caps, sorry about that. Anyway, have fun
