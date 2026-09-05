@@ -1,71 +1,206 @@
-# Rainbow-BASIC
-Fixing what Jack refused to
+The previous readme text is irrelevant, I have updated everything.
 
-Rainbow BASIC is a playful, PET‑friendly dialect designed for young learners, creative coders, and retro‑computing explorers. This document defines the official V1 command set.
+It is finally done. the python file is up. just run the command line and use the following:
 
+python GDREAM_builder.py --system PET --commands "MOVEUSIN,GRAPHIC,CHARDEF"
 
-Core Language Commands
-RUN — execute the current program
+this was a MASSIVE undertaking and a month of progress is finished
 
-END — stop program execution
+I will NOT be updating this
 
-GOTO <line> — jump to a specific line
+good luck and have fun.
 
-IF <expr> THEN <line> — conditional branch
+Here's the updated README:
 
-LIST — display the program listing
+GDREAM — Universal Commodore Command System
+One command language. Any Commodore machine. One click to build a disk image.
+GDREAM is a modern toolchain for classic Commodore computers.
+It lets you define high‑level commands once, then automatically generates:
 
-CLS — clear the screen
+PET BASIC runtimes
 
-Variables & I/O
-LET <var> = <value> — assign a numeric or string value
+C64 BASIC runtimes
 
-INPUT <var> — read user input
+VIC‑20 BASIC runtimes
 
-PRINT <text or expr> — display text or evaluated expressions
+Plus/4 BASIC runtimes
 
-Graphics & Color
-COLOR <fg>, <bg> — set foreground/background colors
+C128 BASIC runtimes
 
-RAINBOW — activate smooth color‑cycling
+B128 BASIC runtimes
 
-CHAR <code> — print a PETSCII character by numeric code
+…and builds matching D64 disk images for each system.
 
-Sprite & Motion Commands
-SPRITE <id>, <x>, <y> — create or move a sprite
+GDREAM is designed to be simple, powerful, and universal — a single command language that works across the entire Commodore ecosystem.
 
-MOTION <id>, <dx>, <dy> — apply velocity to a sprite
+✨ Features
+Universal Command Adder
+Define commands in plain language:
 
-STOP <id> — stop sprite movement
+Code
+MOVEUSIN:ACCEPTS X AND Y POSITION
+GRAPHIC:PICK FROM HIRES OR LORES
+CHARDEF:CREATE A CHARACTER USING A DRAW TOOL
+GDREAM automatically:
 
-HIDE <id> — make a sprite invisible
+Converts them into PET‑safe tokens
 
-SHOW <id> — make a sprite visible
+Generates BASIC dispatchers
 
-Age‑Based Behavior Modes
-Ages 5–7: simplified coordinates, automatic bounds checking, no negative velocities
+Injects them into system templates
 
-Ages 8–10: full coordinate grid, simple velocity
+Builds runnable BASIC programs
 
-Ages 11+: full sprite control, negative velocity, wrap‑around
+Produces D64 disk images
 
-Help System
-HELP — list all commands
+You never touch BASIC.
+You never edit templates.
+You only add commands.
 
-HELP <command> — show detailed help for a specific command
+Cross‑Commodore Support
+GDREAM supports:
 
-License: 
-This project is licensed under the Apache License 2.0.
-See the LICENSE file for details.
-See the LICENSE file for the full license text.
+PET
 
-additional: the development is taking longer than expected but rest assured it will be out whenever possible. as of now there will be only one version as a public release. it is not out at this time, please be patient
+C64
 
+VIC‑20
 
- due to the fact that this is my first big project, and as I am not as skilled in multiple OS versions, the best I will be able to give you for cross building is a text file of the code. I apologize for that
+Plus/4
 
- Edit for 3/16/26
+C128
 
- WordBASIC is finally done. y'all are in for a treat
+B128
+
+Each system gets its own auto‑generated BASIC runtime and disk image.
+
+GUI Front‑End
+The GDREAM GUI lets you:
+
+Add commands
+
+Select a target system
+
+Choose an output folder
+
+Build a disk image with one click
+
+The GUI funnels all commands directly into the builder.
+
+Builder Script
+GDREAM_builder.py is the heart of GDREAM.
+
+It:
+
+Accepts commands from the GUI
+
+Generates BASIC runtimes
+
+Injects dispatchers
+
+Builds D64 images
+
+Writes everything into the user‑selected folder
+
+The user’s only job is to pick a folder and click “Make Disk Image.”
+
+Linux C/H Source Version
+A native Linux CLI version is included:
+
+gdream.c
+
+gdream.h
+
+Makefile
+
+This provides a lightweight, terminal‑friendly alternative to the GUI.
+
+📦 Installation
+Windows
+Install Python 3.10+
+
+Install PyInstaller:
+
+Code
+pip install pyinstaller
+Build the GUI executable:
+
+Code
+pyinstaller --onefile --windowed GDREAM_PET_TOKEN_GUI.py
+Run the builder through the GUI.
+
+Linux
+Install GCC
+
+Build the CLI version:
+
+Code
+make -C linux
+Run the builder directly:
+
+Code
+python3 GDREAM_builder.py --system PET --commands "MOVEUSIN,GRAPHIC" --folder "/path/to/output"
+🛠 Usage
+1. Run the GUI
+Select a system
+
+Add commands
+
+Choose an output folder
+
+Click Make Disk Image
+
+The GUI calls the builder automatically.
+
+2. Builder Output
+The builder writes into the chosen folder:
+
+GDREAM_SYSTEM.BAS
+
+GDREAM_SYSTEM.d64
+
+Example:
+
+Code
+GDREAM_PET.BAS
+GDREAM_PET.d64
+3. Load the D64 in your emulator
+Use your own installation of:
+
+xpet
+
+x64
+
+xvic
+
+xplus4
+
+x128
+
+GDREAM does not include emulator binaries.
+
+📁 Output Structure
+Code
+/chosen/folder/
+  GDREAM_PET.BAS
+  GDREAM_PET.d64
+  GDREAM_C64.BAS
+  GDREAM_C64.d64
+  GDREAM_VIC20.BAS
+  GDREAM_VIC20.d64
+  GDREAM_PLUS4.BAS
+  GDREAM_PLUS4.d64
+  GDREAM_C128.BAS
+  GDREAM_C128.d64
+  GDREAM_B128.BAS
+  GDREAM_B128.d64
+Only the systems you build will appear.
+
+📜 License
+GDREAM is released under the MIT License.
+You are free to modify, distribute, and build upon this project.
+
+💬 Credits
+GDREAM was created as a modern, universal command system for retro computing enthusiasts who want a single language that works across the entire Commodore family.
 
  
