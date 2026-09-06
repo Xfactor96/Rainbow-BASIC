@@ -1,157 +1,79 @@
-I worked my ass off trying to get this done but the GDREAM engine is now live. Everything in RAINBOW BASIC still applies. Here's the full list of commands:
-GDREAM FINALUPDATE — COMMAND REFERENCE
-=====================================
+Everything is going into V5, I am DONE with the PET's SHIT!
 
-GLOBAL COMMANDS
-----------------
-HELP <topic>
-HELP UPDATE
-CLEAR
-EXIT
-MODE <WORD|FREEFORM|FMV|PLATFORM|EXEC>
-FREEFORM ON/OFF
-GUI
-SCAN
-UPDATE
-EXPAND <keyword>
-DEVKIT <platform> <command>
-VICE PATCH <file> <offset_hex> <bytes_hex>
+sorry for the rant, I just...I fucking hate it!
 
+sorry but (deep breath)
 
-WORD MODE
----------
-NOUN <word>
-VERB <word>
-ADJ <word>
-COMPOSE
+WHO THE FUCK DESIGNS A COMPUTER WITH A BASIC THAT ACTIVELY HINDERS THE USER? AM I TO BELIEVE THAT THE INTENT WAS TORTURE? WAS IT SO HARD JACK? WAS IT SO HARD TO PAY AN EXTRA $3? 3 FUCKING DOLLARS! 1,2,3 I KNOW YOU CAN COUNT!
 
-Examples:
-  NOUN castle
-  VERB rises
-  ADJ ancient
-  COMPOSE
+CHEAP, FUCKING CHEAP, CHEAP FUCKING FUCKER THAT FUCKED US OVER WITH HIS FUCKING FUCKTARD FUCKFEST FUCKERY!
+i TRIED GOING INTO THE MONITOR, I TRIED REWRITING IT WITH AI TO MAKE IT V4 COMPLIANT, I WROTE A GODDAMNED PYTHON SCRIPT TO MAKE THE D64 FILES...TWICE! THIS MACHINE IS FUCKING CURSED. IF I WAS TRAPPED IN 1977 WITH NO WAY OUT FOR A YEAR, 
+I WOULD PAY THROUGH THE NOSE FOR AN APPLE II. I DON'T GIVE A SHIT ABOUT THE INTEGER BASIC, I DON'T GIVE A SHIT ABOUT THE COMPANY, I DON'T CARE FOR STEVIE WONDER, I JUST WANT CRAPPADORE TO DIE SCREAMING.
+
+...did I say too much? so...yeah, um, V5 is working for now, everything is pretty much as is for now.
+
+i need to go lie down. tomorrow is sunday. it was supposed to be my saturday, MY FUCKING SATURDAY! RUINED, RUINED BY THIS...FUCK MY OCD. EVERY DAY 3:45, GET ON. I HAVEN'T PLAYED ANY GAMES FOR WEEKS EXPECT RE9 AND I WAS SO CLOSE TO THE SPEED DEMON ACHIEVEMENT
+ SO FUCKING CLOSE AND THE ELPIS? I ALREADY CURED LEON (YES SPOILER), JUST GIVE ME MY CP POINTS ALREADY! SO YEAH, I'M PISSED
+
+BUT WHAT HAS ME EVEN MORE PISSED? I WANTED TO OPEN SOURCE THIS TO THE WORLD, I WANTED TO MAKE SOMETHING, SOMETHING FOR MY KIDS WHEN I MARRY, SO THEY CAN LEARN, SO THEY CAN HAVE FUN.
+
+OH YOU WANT TO LEARN PROGRAMMING? WELL HERE'S TOO EASY AND TOO HARD AND NO FUCKING MEDIUM! IT'S EITHER LEGO OR IT'S C OR GOD FORBID RUST OR C OR C++ OR GO OR GOD KNOWS WHAT. BUT PYTHON? I CAN'T...I FUCKING CAN'T. COPILOT CAN'T CODE FOR SHIT, 
+I CAN'T AFFORD CLAUDE AND I'M RUNNING ON EMPTY, EMPTY PEOPLE! E M P T Y, THAT STANDS FOR I'M FUCKING EXHAUSTED.
 
 
-FREEFORM MODE
--------------
-DESCRIBE <text>
-STYLE <style>
-RENDER
-EXPAND <keyword>
-
-Examples:
-  DESCRIBE a foggy forest
-  STYLE vhs
-  RENDER
+DON'T ASK FOR UPDATES, DON'T ASK FOR A BUG REPORT, DON'T ASK FOR ANYTHING.
 
 
-FMV MODE
---------
-FRAME <description>
-FPS <number>
-PLAY
-
-Examples:
-  FRAME hero enters room
-  FPS 8
-  PLAY
+3 fucking dollars jack
 
 
-PLATFORM MODE
--------------
-TILE <tile>
-ENTITY <entity>
-MOVE <entity> <direction>
-GRAVITY <on|off>
-
-Examples:
-  TILE stone floor
-  ENTITY player
-  MOVE player right
-  GRAVITY off
 
 
-EXEC MODE
----------
-ADMIN ON/OFF
-AUDIT
-PURGE
-EXPAND <keyword>
-DEVKIT <platform> <command>
-
-Examples:
-  ADMIN ON
-  AUDIT
-  PURGE
-  EXPAND torch
 
 
-DEVKIT — COMMODORE (RAINBOW PACKAGE)
--------------------------------------
-BUILD / MAKE
-FIND <value>
-POKE <addr> <value>
-FILL <addr> <length> <value>
-MATCH <value>
-ASM
-STRICT <version>
-ADD <command>
-MEMFIT
-SPRITE <id> <hexdata>
-SECTION <name> <start> <end>
-FLOAT
-PRECISE <digits>
-BLOCK <x> <y> <id>
-XPOKE <addr> <value16>
-XPEEK <addr>
-FILTER
-SOUND <params>
-DEMO
-
-Exports: RAINBOW.d64
-
-Examples:
-  DEVKIT COMMODORE BUILD
-  DEVKIT COMMODORE POKE 0xC000 1
-  DEVKIT COMMODORE FILL 0x0400 100 32
-  DEVKIT COMMODORE SPRITE 0 DEADBEEF
 
 
-DEVKIT — PET
--------------
-MTU
-ALLOC <bytes>
-DIAG
-FAST
-STRICT <version>
-LAX
-KEY <mapping>
-SOUND <params>
 
-UPGRADE (enables business commands):
-  SEEK <target>
-  FIND <target>
-  P. <text>
-  MEMFIT
-  ACCOUNT
-  MEM MAX <amount>
-  FONT <mode>
-  FIX <doc>
-  REPAIR <doc>
 
-Exports: RAINBOW_PET.d64
 
-Examples:
-  DEVKIT PET MTU
-  DEVKIT PET UPGRADE
-  DEVKIT PET SEEK invoice
-  DEVKIT PET FONT AMBER
 
-Expand allows you to add even more. I've added FMV options, I've even made this program safe for larger companies. Yes, the execs and corporate can add all the BS they want but I assure you, the system will NOT accept it. 
-they will also get a "Special" version of the game. Let me reiterate: EA can use my tool to make their games but they cannot override, bypass or reverse engineer it. You corporate assholes will get a special version of the game: 
-Completely broken, just like you. This engine is licensed under Apache 2.0. The code is open source but the engine is mine. Porn is not allowed under any circumstances and will not be tolerated. If i find out you did it (and i have my ways), you're locked
-out of updates. DON'T test my generosity. 
 
-It is my earnest hope that you enjoy this product and make some truly epic games with it. There's a bunch of easter eggs and stuff, minigames when loading etc. You're going to have a lot of fun with this one. FREEFORM allows plain english to be used. 
-no forth BS, once the word is typed, it goes in the dictionary. All images and other resources come from a PD server (archive.org) and the program is syntax agnostic. you can use line numbers, you can use full sentences or you can use caps.
-the base mode (word) is All caps, sorry about that. Anyway, have fun
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3 FUCKING DOLLARS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+FUCK!
